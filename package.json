@@ -1,0 +1,21 @@
+{
+  "name": "monokai-kai",
+  "displayName": "Monokai Kai",
+  "description": "Monokaiライクなカラーテーマ。",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Monokai Kai",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Monokai Kai-color-theme.json"
+      }
+    ]
+  }
+}
