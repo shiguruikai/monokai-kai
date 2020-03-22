@@ -154,7 +154,9 @@
         "storage.type.object",
         "support.class",
         "support.constant",
-        "support.type.object"
+        "support.type.object",
+        "entity.other.inherited-class.java",
+        "storage.type.java"
       ],
       "settings": {
         "foreground": "#78dce8",
