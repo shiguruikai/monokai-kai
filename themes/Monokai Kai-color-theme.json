@@ -170,19 +170,6 @@
       }
     },
     {
-      "name": "プリミティブ型, null, undefined",
-      "scope": [
-        "storage.type.built-in.primitive",
-        "storage.type.primitive",
-        "support.type.builtin",
-        "support.type.primitive"
-      ],
-      "settings": {
-        "foreground": "#ff6188",
-        "fontStyle": ""
-      }
-    },
-    {
       "name": "キーワード",
       "scope": ["keyword", "constant.language"],
       "settings": {
@@ -193,6 +180,27 @@
     {
       "name": "ストレージ修飾子",
       "scope": ["storage"],
+      "settings": {
+        "foreground": "#ff6188",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Language variables",
+      "scope": ["variable.language"],
+      "settings": {
+        "foreground": "#ff6188",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "プリミティブ型, null, undefined",
+      "scope": [
+        "storage.type.built-in.primitive",
+        "storage.type.primitive",
+        "support.type.builtin",
+        "support.type.primitive"
+      ],
       "settings": {
         "foreground": "#ff6188",
         "fontStyle": ""
@@ -652,14 +660,6 @@
       }
     },
     {
-      "name": "[ts] キーワード",
-      "scope": ["variable.language.this.ts"],
-      "settings": {
-        "foreground": "#ff6188",
-        "fontStyle": ""
-      }
-    },
-    {
       "name": "[ts] デコレータ",
       "scope": ["source.ts meta.decorator.ts punctuation.decorator.ts"],
       "settings": {
@@ -688,9 +688,20 @@
     },
     {
       "name": "ghaschel.vscode-angular-html",
-      "scope": ["text.angular.html support.type.object.html-attribute"],
+      "scope": [
+        "text.angular.html support.type.object.html-attribute",
+        "text.angular.html keyword.operator.entity.html"
+      ],
       "settings": {
         "foreground": "#ace8ff",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "ghaschel.vscode-angular-html",
+      "scope": ["text.angular.html punctuation.definition.string"],
+      "settings": {
+        "foreground": "#ffd866",
         "fontStyle": ""
       }
     }
