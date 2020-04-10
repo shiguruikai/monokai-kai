@@ -150,13 +150,14 @@
     {
       "name": "クラス名, オブジェクト名",
       "scope": [
+        "entity.name.class",
         "entity.name.type",
+        "entity.other.inherited-class.java",
+        "storage.type.java",
         "storage.type.object",
         "support.class",
         "support.constant",
-        "support.type.object",
-        "entity.other.inherited-class.java",
-        "storage.type.java"
+        "support.type.object"
       ],
       "settings": {
         "foreground": "#78dce8",
@@ -601,11 +602,12 @@
       "name": "[sql]",
       "scope": ["source.sql"],
       "settings": {
-        "foreground": "#ace8ff"
+        "foreground": "#ace8ff",
+        "fontStyle": ""
       }
     },
     {
-      "name": "[sql] データーベース名とテーブル名",
+      "name": "[sql] データーベース名、テーブル名",
       "scope": [
         "source.sql constant.other.database-name.sql",
         "source.sql constant.other.table-name.sql"
