@@ -82,10 +82,11 @@
     {
       "name": "ドキュメントコメント",
       "scope": [
-        "comment.block.documentation",
         "comment.block.documentation punctuation.definition.comment",
-        "comment.block.html",
+        "comment.block.documentation",
         "comment.block.html punctuation.definition.comment",
+        "comment.block.html",
+        "comment.block.javadoc punctuation.definition.comment",
         "comment.block.javadoc"
       ],
       "settings": {
@@ -94,7 +95,7 @@
       }
     },
     {
-      "name": "ドキュメントコメント タグ",
+      "name": "ドキュメントコメント内のタグ",
       "scope": [
         "comment.block.documentation punctuation.definition.block",
         "comment.block.documentation storage.type.class",
@@ -107,7 +108,7 @@
       }
     },
     {
-      "name": "ドキュメントコメント クラス, 変数",
+      "name": "ドキュメントコメント内のクラスや変数",
       "scope": [
         "comment.block.documentation entity.name.type",
         "comment.block.documentation variable.other",
@@ -116,14 +117,6 @@
       "settings": {
         "foreground": "#aa8257",
         "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "数字",
-      "scope": ["constant.numeric"],
-      "settings": {
-        "foreground": "#ab9df2",
-        "fontStyle": ""
       }
     },
     {
@@ -166,43 +159,23 @@
     },
     {
       "name": "インターフェース名",
-      "scope": ["entity.name.type.interface"],
+      "scope": ["entity.name.interface", "entity.name.type.interface"],
       "settings": {
         "foreground": "#30C0FF",
         "fontStyle": "bold"
       }
     },
     {
-      "name": "キーワード",
-      "scope": ["keyword", "constant.language"],
-      "settings": {
-        "foreground": "#ff6188",
-        "fontStyle": ""
-      }
-    },
-    {
-      "name": "ストレージ修飾子",
-      "scope": ["storage"],
-      "settings": {
-        "foreground": "#ff6188",
-        "fontStyle": ""
-      }
-    },
-    {
-      "name": "Language variables",
-      "scope": ["variable.language"],
-      "settings": {
-        "foreground": "#ff6188",
-        "fontStyle": ""
-      }
-    },
-    {
-      "name": "プリミティブ型, null, undefined",
+      "name": "キーワード, ストレージ修飾子, プリミティブ型, null, undefined",
       "scope": [
+        "constant.language",
+        "keyword",
         "storage.type.built-in.primitive",
         "storage.type.primitive",
+        "storage",
         "support.type.builtin",
-        "support.type.primitive"
+        "support.type.primitive",
+        "variable.language"
       ],
       "settings": {
         "foreground": "#ff6188",
@@ -255,10 +228,26 @@
     },
     {
       "name": "定数",
-      "scope": "variable.other.constant",
+      "scope": ["variable.other.constant"],
       "settings": {
-        "foreground": "#AB9DF2",
+        "foreground": "#ab9df2",
         "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "数値リテラル",
+      "scope": ["constant.numeric"],
+      "settings": {
+        "foreground": "#ab9df2",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "文字列内の文字エスケープ, プレースホルダ",
+      "scope": ["constant.character.escape", "constant.other.placeholder"],
+      "settings": {
+        "foreground": "#ab9df2",
+        "fontStyle": ""
       }
     },
     {
