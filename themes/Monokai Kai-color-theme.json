@@ -87,7 +87,8 @@
         "comment.block.html punctuation.definition.comment",
         "comment.block.html",
         "comment.block.javadoc punctuation.definition.comment",
-        "comment.block.javadoc"
+        "comment.block.javadoc",
+        "punctuation.definition.comment comment.block"
       ],
       "settings": {
         "foreground": "#629755",
@@ -172,6 +173,7 @@
         "keyword",
         "storage.type.built-in.primitive",
         "storage.type.primitive",
+        "storage.type.local.java",
         "storage",
         "support.type.builtin",
         "support.type.primitive",
@@ -423,7 +425,7 @@
       }
     },
     {
-      "name": "entity タグ名",
+      "name": "エンティティ タグ名",
       "scope": ["entity.name.tag"],
       "settings": {
         "foreground": "#30C0FF",
@@ -479,7 +481,7 @@
       }
     },
     {
-      "name": "[shell] キーワード扱い",
+      "name": "[shell] キーワード",
       "scope": [
         "source.shell punctuation.separator.pipe-sign",
         "source.shell punctuation.terminator.case-clause",
@@ -695,6 +697,22 @@
       "scope": ["text.angular.html punctuation.definition.string"],
       "settings": {
         "foreground": "#ffd866",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "[gradle]",
+      "scope": ["source.gradle support.type.project"],
+      "settings": {
+        "foreground": "#a9dc76",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "[groovy] interpolated",
+      "scope": ["variable.other.interpolated.groovy"],
+      "settings": {
+        "foreground": "#ace8ff",
         "fontStyle": ""
       }
     }
