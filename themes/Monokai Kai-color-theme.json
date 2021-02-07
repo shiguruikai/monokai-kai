@@ -237,6 +237,14 @@
       }
     },
     {
+      "name": "列挙型",
+      "scope": ["variable.other.enummember"],
+      "settings": {
+        "foreground": "#ab9df2",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "name": "数値リテラル",
       "scope": ["constant.numeric"],
       "settings": {
