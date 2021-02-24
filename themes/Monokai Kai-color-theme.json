@@ -151,8 +151,7 @@
         "storage.type.object",
         "support.class",
         "support.constant",
-        "support.type.object",
-        "variable.other.object"
+        "support.type.object"
       ],
       "settings": {
         "foreground": "#78dce8",
