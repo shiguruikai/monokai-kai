@@ -1,5 +1,6 @@
 {
   "name": "Monokai Kai",
+  "semanticHighlighting": true,
   "type": "dark",
   "colors": {
     "activityBarBadge.background": "#007acc",
@@ -205,7 +206,8 @@
       "scope": [
         "entity.name.function",
         "support.function",
-        "variable.function"
+        "variable.function",
+        "meta.method"
       ],
       "settings": {
         "foreground": "#a9dc76",
