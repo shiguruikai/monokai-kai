@@ -207,7 +207,7 @@
         "entity.name.function",
         "support.function",
         "variable.function",
-        "meta.method"
+        "meta.method.groovy"
       ],
       "settings": {
         "foreground": "#a9dc76",
