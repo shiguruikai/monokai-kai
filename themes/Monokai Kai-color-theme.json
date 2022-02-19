@@ -3,20 +3,8 @@
   "semanticHighlighting": true,
   "type": "dark",
   "colors": {
-    "activityBarBadge.background": "#007acc",
     "editor.background": "#1e1e1e",
     "editor.foreground": "#dfdfdf",
-    "editor.inactiveSelectionBackground": "#3a3d41",
-    "editor.selectionHighlightBackground": "#add6ff26",
-    "editorIndentGuide.activeBackground": "#707070",
-    "editorIndentGuide.background": "#404040",
-    "input.placeholderForeground": "#a6a6a6",
-    "list.dropBackground": "#383b3d",
-    "menu.background": "#252526",
-    "menu.foreground": "#cccccc",
-    "settings.numberInputBackground": "#292929",
-    "settings.textInputBackground": "#292929",
-    "sideBarTitle.foreground": "#bbbbbb",
     "tab.activeBorder": "#007acc"
   },
   "tokenColors": [
@@ -148,6 +136,7 @@
         "entity.name.class",
         "entity.name.type",
         "entity.other.inherited-class.java",
+        "storage.type.groovy",
         "storage.type.java",
         "storage.type.object",
         "support.class",
@@ -172,9 +161,10 @@
       "scope": [
         "constant.language",
         "keyword",
+        "punctuation.separator.key-value.html",
         "storage.type.built-in.primitive",
-        "storage.type.primitive",
         "storage.type.local.java",
+        "storage.type.primitive",
         "storage",
         "support.type.builtin",
         "support.type.primitive",
@@ -428,7 +418,7 @@
     },
     {
       "name": "ハイパーリンク",
-      "scope": ["variable.parameter.url"],
+      "scope": ["variable.parameter.url", "markup.underline.link"],
       "settings": {
         "foreground": "#3794ff",
         "fontStyle": "underline"
@@ -451,16 +441,11 @@
       }
     },
     {
-      "name": "エンティティ クラス名",
-      "scope": "entity.other.attribute-name.class",
-      "settings": {
-        "foreground": "#a9dc76",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "エンティティ ID名",
-      "scope": "entity.other.attribute-name.id",
+      "name": "エンティティ クラス名, ID名",
+      "scope": [
+        "entity.other.attribute-name.class",
+        "entity.other.attribute-name.id"
+      ],
       "settings": {
         "foreground": "#a9dc76",
         "fontStyle": "bold"
@@ -530,30 +515,35 @@
       }
     },
     {
-      "scope": ["markup.bold"],
-      "settings": {
-        "fontStyle": "bold"
-      }
-    },
-    {
+      "name": "[markdown] 斜体",
       "scope": ["markup.italic"],
       "settings": {
         "fontStyle": "italic"
       }
     },
     {
-      "scope": ["markup.italic markup.bold ", "markup.bold markup.italic"],
+      "name": "[markdown] 太字",
+      "scope": ["markup.bold"],
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "[markdown] 斜体 + 太字",
+      "scope": ["markup.bold markup.italic", "markup.italic markup.bold "],
       "settings": {
         "fontStyle": "italic bold"
       }
     },
     {
+      "name": "[markdown] 下線",
       "scope": ["markup.underline"],
       "settings": {
         "fontStyle": "underline"
       }
     },
     {
+      "name": "[markdown] 見出し",
       "scope": ["markup.heading"],
       "settings": {
         "foreground": "#78dce8",
@@ -561,14 +551,7 @@
       }
     },
     {
-      "scope": ["fenced_code.block.language"],
-      "settings": {
-        "foreground": "#78dce8",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "[markdown]",
+      "name": "[markdown] 記号",
       "scope": ["text.html.markdown punctuation.definition"],
       "settings": {
         "foreground": "#ff6188",
@@ -576,7 +559,7 @@
       }
     },
     {
-      "name": "[markdown]",
+      "name": "[markdown] ``で囲まれた文字列",
       "scope": ["text.html.markdown markup.inline.raw.string.markdown"],
       "settings": {
         "foreground": "#ffd866",
@@ -584,18 +567,18 @@
       }
     },
     {
-      "name": "[markdown]",
-      "scope": ["text.html.markdown markup.underline.link.markdown"],
-      "settings": {
-        "foreground": "#007acc",
-        "fontStyle": "underline"
-      }
-    },
-    {
-      "name": "[markdown]",
+      "name": "[markdown] 水平線",
       "scope": ["text.html.markdown meta.separator.markdown"],
       "settings": {
         "foreground": "#a9dc76",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "[markdown] コードブロックに指定する言語名",
+      "scope": ["fenced_code.block.language.markdown"],
+      "settings": {
+        "foreground": "#e6b422",
         "fontStyle": ""
       }
     },
@@ -619,7 +602,7 @@
       }
     },
     {
-      "name": "[php] keyword",
+      "name": "[php] キーワード",
       "scope": "punctuation.section.embedded.begin.php",
       "settings": {
         "foreground": "#ff6188",
@@ -654,10 +637,11 @@
       }
     },
     {
-      "name": "[html] タグ記号",
+      "name": "[html, xml] タグ記号 <>",
       "scope": [
         "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html"
+        "punctuation.definition.tag.end.html",
+        "punctuation.definition.tag.xml"
       ],
       "settings": {
         "foreground": "#a8a8a8",
@@ -711,19 +695,61 @@
       }
     },
     {
-      "name": "[gradle]",
-      "scope": ["source.gradle support.type.project"],
+      "name": "[groovy] 赤いやつ",
+      "scope": [
+        // ${}
+        "punctuation.section.embedded.groovy",
+        // $
+        "variable.other.interpolated.groovy"
+      ],
       "settings": {
-        "foreground": "#a9dc76",
+        "foreground": "#ff6188",
         "fontStyle": ""
       }
     },
     {
-      "name": "[groovy] interpolated",
-      "scope": ["variable.other.interpolated.groovy"],
+      "name": "[Angular Template] 赤いやつ",
+      "scope": [
+        // 独自のタグ名
+        "text.html.derivative meta.tag.custom entity.name.tag.html",
+        // {{, }}
+        "text.html.derivative punctuation.definition.block.ts"
+      ],
       "settings": {
-        "foreground": "#ace8ff",
+        "foreground": "#ff6188",
         "fontStyle": ""
+      }
+    },
+    {
+      "name": "[Angular Template] バインディングに使用される記号 *, (), [], [()] など",
+      "scope": ["text.html.derivative punctuation.definition.ng-binding-name"],
+      "settings": {
+        "foreground": "#ffd866",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "[Angular] バインディング対象の名前",
+      "scope": ["text.html.derivative entity.other.ng-binding-name"],
+      "settings": {
+        "foreground": "#fc9867",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "[Angular Template] 定数",
+      "scope": ["text.html.derivative expression.ng constant"],
+      "settings": {
+        "foreground": "#ab9df2",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "[Angular Template] 変数",
+      "scope": ["text.html.derivative expression.ng variable"],
+      "settings": {
+        "foreground": "#cfcfcf",
+        "fontStyle": "bold"
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
   "name": "monokai-kai",
   "displayName": "Monokai Kai",
-  "description": "Monokaiライクなカラーテーマ。",
+  "description": "VSCodeのデフォルトダークテーマをベースにしたMonokai風のテーマ。",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.41.0"

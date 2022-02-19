@@ -1,7 +1,29 @@
 # README
+VSCodeのデフォルトダークテーマをベースにしたMonokai風のテーマ。
 
 ### 背景色
-<img alt="#1e1e1e" src="https://placehold.jp/1e1e1e/1e1e1e/1x1.png" width="32" height="32">
+
+| 色  | 色      | 主な用途         |
+| --- | ------- | ---------------- |
+| 黒  | #1e1e1e | エディター背景色 |
 
 ### 文字色
-<img alt="#dfdfdf" src="https://placehold.jp/dfdfdf/dfdfdf/1x1.png" width="32" height="32"><img alt="#a8a8a8" src="https://placehold.jp/a8a8a8/a8a8a8/1x1.png" width="32" height="32"><img alt="#858585" src="https://placehold.jp/858585/858585/1x1.png" width="32" height="32"><br><img alt="#ff6188" src="https://placehold.jp/ff6188/ff6188/1x1.png" width="32" height="32"><img alt="#fc9867" src="https://placehold.jp/fc9867/fc9867/1x1.png" width="32" height="32"><img alt="#ffd866" src="https://placehold.jp/ffd866/ffd866/1x1.png" width="32" height="32"><img alt="#a9dc76" src="https://placehold.jp/a9dc76/a9dc76/1x1.png" width="32" height="32"><img alt="#78dce8" src="https://placehold.jp/78dce8/78dce8/1x1.png" width="32" height="32"><img alt="#ab9df2" src="https://placehold.jp/ab9df2/ab9df2/1x1.png" width="32" height="32"><br><img alt="#30c0ff" src="https://placehold.jp/30c0ff/30c0ff/1x1.png" width="32" height="32"><img alt="#ace8ff" src="https://placehold.jp/ace8ff/ace8ff/1x1.png" width="32" height="32"><img alt="#e9d9ff" src="https://placehold.jp/e9d9ff/e9d9ff/1x1.png" width="32" height="32"><img alt="#e6b422" src="https://placehold.jp/e6b422/e6b422/1x1.png" width="32" height="32"><img alt="#629755" src="https://placehold.jp/629755/629755/1x1.png" width="32" height="32"><img alt="#aa8257" src="https://placehold.jp/aa8257/aa8257/1x1.png" width="32" height="32"><br><img alt="#3794ff" src="https://placehold.jp/3794ff/3794ff/1x1.png" width="32" height="32">
+| 色     | 色      | 字体        | 主な用途                       | コントラスト比 |
+| ------ | ------- | ----------- | ------------------------------ | -------------: |
+| 白     | #dfdfdf |             | デフォルト、ローカル変数名     |          12.51 |
+| 白     | #cfcfcf | bold        | 特殊な変数名                   |          10.70 |
+| 赤     | #ff6188 |             | キーワード、プリミティブ型     |           5.81 |
+| 橙     | #fc9867 |             | パラメーター名                 |           7.80 |
+| 金     | #e6b422 |             | アノテーション、デコレータ     |           8.66 |
+| 黄     | #ffd866 |             | 文字列                         |          12.12 |
+| 緑     | #a9dc76 |             | メソッド名                     |          10.47 |
+| 緑     | #a9dc76 | bold        | CSSクラス名                    |          10.47 |
+| 青     | #78dce8 | bold        | クラス名                       |          10.48 |
+| 薄い青 | #ace8ff |             | プロパティ名、属性名           |          12.49 |
+| 濃い青 | #30c0ff | bold        | インターフェース名、タグ名     |           8.02 |
+| 紫     | #ab9df2 |             | 数字、エスケープされた文字     |           7.01 |
+| 紫     | #ab9df2 | italic      | 定数名                         |           7.01 |
+| 灰     | #858585 |             | 1行コメント                    |           4.52 |
+| 濃い緑 | #629755 | italic      | ブロックコメント               |           4.82 |
+| 濃い緑 | #629755 | italic bold | ブロックコメント内のキーワード |           4.82 |
+| 濃い緑 | #aa8257 | italic      | ブロックコメント内の変数名     |           4.79 |
