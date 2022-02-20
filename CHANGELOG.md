@@ -1,7 +1,7 @@
 # Change Log
 
-## [1.x.x]
-### Changed
+## [1.1.0] - 2022-02-20
+### 変更
 - cssの16進数RGB値のシャープ(`#`)を赤色にする。
 - `punctuation.section.embedded.begin`（埋め込みの`{}`など）を赤色にする。
 - `punctuation.separator.key-value`（`{ key: value }`の`:`など）を赤色にする。
