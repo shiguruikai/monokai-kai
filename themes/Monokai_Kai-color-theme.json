@@ -25,6 +25,102 @@
     "statusBarItem.remoteForeground": "#ffffff",
     "tab.lastPinnedBorder": "#cccccc33"
   },
+  "semanticTokenColors": {
+    "namespace": {
+      "foreground": "#dfdfdf"
+    },
+    "variable": {
+      "foreground": "#dfdfdf"
+    },
+    "variable.defaultLibrary": {
+      "foreground": "#cfcfcf",
+      "bold": true
+    },
+    "keyword": {
+      "foreground": "#ff6188"
+    },
+    "variable.parameter": {
+      "foreground": "#fc9867"
+    },
+    "annotation": {
+      "foreground": "#e6b422",
+      "italic": false,
+      "bold": false
+    },
+    "method": {
+      "foreground": "#a9dc76"
+    },
+    "function": {
+      "foreground": "#a9dc76"
+    },
+    "class.declaration.constructor": {
+      "foreground": "#a9dc76",
+      "bold": true
+    },
+    "property": {
+      "foreground": "#ace8ff"
+    },
+    "annotationMember": {
+      "foreground": "#ace8ff"
+    },
+    "class": {
+      "foreground": "#78dce8",
+      "bold": true
+    },
+    "enum": {
+      "foreground": "#78dce8",
+      "italic": true,
+      "bold": true
+    },
+    "interface": {
+      "foreground": "#30c0ff",
+      "bold": true
+    },
+    "type": {
+      "foreground": "#30c0ff",
+      "bold": true
+    },
+    "typeParameter": {
+      "foreground": "#30c0ff",
+      "bold": true
+    },
+    "variable.readonly": {
+      "foreground": "#ab9df2"
+    },
+    "number": {
+      "foreground": "#ab9df2"
+    },
+    "numberLiteral": {
+      "foreground": "#ab9df2"
+    },
+    "property.readonly": {
+      "foreground": "#ab9df2"
+    },
+    "enumMember": {
+      "foreground": "#ab9df2",
+      "italic": true,
+      "bold": true
+    },
+    "comment": {
+      "foreground": "#858585"
+    },
+    "parameter.documentation": {
+      "foreground": "#aa8257",
+      "italic": true
+    },
+    "keyword.documentation": {
+      "foreground": "#629755",
+      "italic": true,
+      "bold": true,
+      "underline": true
+    },
+    "*.deprecated": {
+      "strikethrough": true
+    },
+    "*.static": {
+      "italic": true
+    }
+  },
   "tokenColors": [
     {
       "scope": "region.redish",
@@ -87,14 +183,10 @@
       }
     },
     {
-      "name": "ドキュメントコメント",
+      "name": "ブロックコメント",
       "scope": [
-        "comment.block.documentation punctuation.definition.comment",
-        "comment.block.documentation",
-        "comment.block.html punctuation.definition.comment",
-        "comment.block.html",
-        "comment.block.javadoc punctuation.definition.comment",
-        "comment.block.javadoc",
+        "comment.block",
+        "comment.block punctuation.definition.comment",
         "punctuation.definition.comment comment.block"
       ],
       "settings": {
@@ -103,16 +195,16 @@
       }
     },
     {
-      "name": "ドキュメントコメント内のタグ",
+      "name": "ブロック内のキーワード",
       "scope": [
-        "comment.block.documentation punctuation.definition.block",
-        "comment.block.documentation storage.type.class",
-        "comment.block.javadoc keyword",
-        "keyword.other.phpdoc.php"
+        "keyword.other.documentation",
+        "keyword.other.phpdoc.php",
+        "comment.block storage.type.class.jsdoc",
+        "punctuation.definition.block.tag.jsdoc"
       ],
       "settings": {
         "foreground": "#629755",
-        "fontStyle": "italic bold"
+        "fontStyle": "italic bold underline"
       }
     },
     {
@@ -120,10 +212,10 @@
       "scope": [
         "comment.block.documentation entity.name.type",
         "comment.block.documentation variable.other",
-        "comment.block.javadoc variable.parameter"
+        "comment.block variable.parameter"
       ],
       "settings": {
-        "foreground": "#aa8257",
+        "foreground": "#AA8257",
         "fontStyle": "italic"
       }
     },
@@ -167,6 +259,14 @@
       }
     },
     {
+      "name": "列挙型",
+      "scope": ["entity.name.type.enum"],
+      "settings": {
+        "foreground": "#78dce8",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
       "name": "インターフェース名",
       "scope": ["entity.name.interface", "entity.name.type.interface"],
       "settings": {
@@ -179,6 +279,7 @@
       "scope": [
         "constant.language",
         "keyword",
+        "punctuation.definition.keyword",
         "punctuation.separator.key-value.html",
         "storage.type.built-in.primitive",
         "storage.type.local.java",
@@ -186,7 +287,9 @@
         "storage",
         "support.type.builtin",
         "support.type.primitive",
-        "variable.language"
+        "variable.language",
+        "punctuation.section.embedded.begin.php",
+        "punctuation.section.embedded.end.php"
       ],
       "settings": {
         "foreground": "#ff6188",
@@ -202,8 +305,16 @@
       }
     },
     {
-      "name": "文字列",
-      "scope": "string",
+      "name": "インポートしているパッケージ名",
+      "scope": ["storage.modifier.import", "storage.modifier.package"],
+      "settings": {
+        "foreground": "#dfdfdf",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "文字列リテラル",
+      "scope": ["string", "punctuation.definition.string"],
       "settings": {
         "foreground": "#ffd866",
         "fontStyle": ""
@@ -243,15 +354,15 @@
       "scope": ["variable.other.constant"],
       "settings": {
         "foreground": "#ab9df2",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
-      "name": "列挙型",
+      "name": "列挙型メンバー",
       "scope": ["variable.other.enummember"],
       "settings": {
         "foreground": "#ab9df2",
-        "fontStyle": "bold"
+        "fontStyle": ""
       }
     },
     {
@@ -293,22 +404,6 @@
       }
     },
     {
-      "name": "オブジェクトリテラルの記号",
-      "scope": "meta.objectliteral punctuation.definition.block",
-      "settings": {
-        "foreground": "#ff6188",
-        "fontStyle": ""
-      }
-    },
-    {
-      "name": "インポート、パッケージ",
-      "scope": ["storage.modifier.import", "storage.modifier.package"],
-      "settings": {
-        "foreground": "#dfdfdf",
-        "fontStyle": ""
-      }
-    },
-    {
       "name": "インポートのワイルドカード",
       "scope": ["storage.modifier.import variable.language.wildcard"],
       "settings": {
@@ -319,18 +414,12 @@
     {
       "name": "括弧, コロン, カンマ",
       "scope": [
-        "meta.brace.curly",
-        "meta.brace.round",
-        "meta.brace.square",
-        "punctuation.bracket.angle",
-        "punctuation.definition.block",
-        "punctuation.section.function",
-        "punctuation.section.property-list",
-        "punctuation.separator.comma",
-        "punctuation.separator.key-value",
-        "punctuation.separator.list.comma",
-        "punctuation.terminator.rule",
-        "punctuation.terminator.statement"
+        "meta.brace",
+        "punctuation.bracket",
+        "punctuation.definition",
+        "punctuation.section",
+        "punctuation.separator",
+        "punctuation.terminator"
       ],
       "settings": {
         "foreground": "#dfdfdf",
@@ -620,26 +709,26 @@
       }
     },
     {
-      "name": "[php] キーワード",
-      "scope": "punctuation.section.embedded.begin.php",
+      "name": "[php] グルーバル変数",
+      "scope": "variable.other.global.php",
       "settings": {
-        "foreground": "#ff6188",
-        "fontStyle": ""
+        "foreground": "#dfdfdf",
+        "fontStyle": "bold"
       }
     },
     {
       "name": "[php] 定数",
-      "scope": "source.php constant.other.class.php",
+      "scope": "constant.other.class.php",
       "settings": {
         "foreground": "#ab9df2",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
       "name": "[php] ヒアドキュメント記号",
       "scope": [
-        "source.php string.unquoted.nowdoc.php punctuation.definition.string.php",
-        "source.php keyword.operator.nowdoc.php"
+        "string.unquoted.nowdoc.php punctuation.definition.string.php",
+        "keyword.operator.nowdoc.php"
       ],
       "settings": {
         "foreground": "#e6b422",
@@ -662,7 +751,7 @@
         "punctuation.definition.tag.xml"
       ],
       "settings": {
-        "foreground": "#a8a8a8",
+        "foreground": "#afafaf",
         "fontStyle": ""
       }
     },
@@ -671,6 +760,14 @@
       "scope": ["source.ts meta.decorator.ts punctuation.decorator.ts"],
       "settings": {
         "foreground": "#e6b422",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "[ts] タイプエイリアス",
+      "scope": ["entity.name.type.alias.ts"],
+      "settings": {
+        "foreground": "#30c0ff",
         "fontStyle": ""
       }
     },
@@ -759,7 +856,7 @@
       "scope": ["text.html.derivative expression.ng constant"],
       "settings": {
         "foreground": "#ab9df2",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
