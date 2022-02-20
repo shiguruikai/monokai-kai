@@ -2,7 +2,7 @@
 
 VSCodeのデフォルトダークテーマをベースにしたMonokai風のテーマ。
 
-![](https://vsmarketplacebadge.apphb.com/version/shiguruikai.monokai-kai.svg)
+[![](https://vsmarketplacebadge.apphb.com/version/shiguruikai.monokai-kai.svg)](https://marketplace.visualstudio.com/items?itemName=shiguruikai.monokai-kai)
 
 [Monokai Kai - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=shiguruikai.monokai-kai)
 
