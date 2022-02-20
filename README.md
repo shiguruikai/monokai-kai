@@ -1,5 +1,10 @@
 # Monokai Kai
+
 VSCodeのデフォルトダークテーマをベースにしたMonokai風のテーマ。
+
+![](https://vsmarketplacebadge.apphb.com/version/shiguruikai.monokai-kai.svg)
+
+[Monokai Kai - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=shiguruikai.monokai-kai)
 
 #### 背景色
 
@@ -12,7 +17,7 @@ VSCodeのデフォルトダークテーマをベースにしたMonokai風のテ�
 | ------ | ------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------- | -------------: |
 | 白     | <img alt="#dfdfdf" src="https://placehold.jp/dfdfdf/dfdfdf/1x1.png" width="16" height="16"> |                       | デフォルト、ローカル変数名                   |          12.51 |
 | 白     | <img alt="#cfcfcf" src="https://placehold.jp/cfcfcf/cfcfcf/1x1.png" width="16" height="16"> | bold                  | 特殊な変数名                                 |          10.70 |
-| 白     | <img alt="#afafaf" src="https://placehold.jp/cfcfcf/cfcfcf/1x1.png" width="16" height="16"> |                       | HTML、XMLの<>                                |           7.60 |
+| 白     | <img alt="#afafaf" src="https://placehold.jp/cfcfcf/cfcfcf/1x1.png" width="16" height="16"> |                       | タグの山括弧 <>                                |           7.60 |
 | 赤     | <img alt="#ff6188" src="https://placehold.jp/ff6188/ff6188/1x1.png" width="16" height="16"> |                       | キーワード、プリミティブ型                   |           5.81 |
 | 橙     | <img alt="#fc9867" src="https://placehold.jp/fc9867/fc9867/1x1.png" width="16" height="16"> |                       | パラメーター名                               |           7.80 |
 | 金     | <img alt="#e6b422" src="https://placehold.jp/e6b422/e6b422/1x1.png" width="16" height="16"> |                       | アノテーション                               |           8.66 |
