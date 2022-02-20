@@ -1,12 +1,6 @@
 # Monokai Kai
 VSCodeのデフォルトダークテーマをベースにしたMonokai風のテーマ。
 
-# 
-- Angular
-- Java
-- JavaScript
-- TypeScript
-
 #### 背景色
 
 | 色  | 色                                                                                          | 適用箇所   |
