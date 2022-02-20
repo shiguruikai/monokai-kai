@@ -251,7 +251,8 @@
         "storage.type.object",
         "support.class",
         "support.constant",
-        "support.type.object"
+        "support.type.object",
+        "entity.other.inherited-class"
       ],
       "settings": {
         "foreground": "#78dce8",
@@ -280,7 +281,8 @@
         "constant.language",
         "keyword",
         "punctuation.definition.keyword",
-        "punctuation.separator.key-value.html",
+        "punctuation.separator.key-value",
+        "punctuation.access.module",
         "storage.type.built-in.primitive",
         "storage.type.local.java",
         "storage.type.primitive",
@@ -288,8 +290,8 @@
         "support.type.builtin",
         "support.type.primitive",
         "variable.language",
-        "punctuation.section.embedded.begin.php",
-        "punctuation.section.embedded.end.php"
+        "punctuation.section.embedded.begin",
+        "punctuation.section.embedded.end"
       ],
       "settings": {
         "foreground": "#ff6188",
@@ -744,11 +746,11 @@
       }
     },
     {
-      "name": "[html, xml] タグ記号 <>",
+      "name": "タグの山括弧 <>",
       "scope": [
-        "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html",
-        "punctuation.definition.tag.xml"
+        "punctuation.definition.tag.xml",
+        "punctuation.definition.tag.begin",
+        "punctuation.definition.tag.end"
       ],
       "settings": {
         "foreground": "#afafaf",
@@ -768,6 +770,17 @@
       "scope": ["entity.name.type.alias.ts"],
       "settings": {
         "foreground": "#30c0ff",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "[css] 赤いやつ",
+      "scope": [
+        // 16進数RGB値のシャープ(#)
+        "constant.other.color.rgb-value.hex.css punctuation.definition.constant.css"
+      ],
+      "settings": {
+        "foreground": "#ff6188",
         "fontStyle": ""
       }
     },
