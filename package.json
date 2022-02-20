@@ -3,6 +3,7 @@
   "displayName": "Monokai Kai",
   "description": "VSCodeのデフォルトダークテーマをベースにしたMonokai風のテーマ。",
   "version": "1.0.0",
+  "publisher": "shiguruikai",
   "repository": {
     "url": "https://github.com/shiguruikai/monokai-kai"
   },
