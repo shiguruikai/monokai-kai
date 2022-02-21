@@ -8,16 +8,16 @@ VSCodeのデフォルトダークテーマをベースにしたMonokai風のテ�
 
 #### 背景色
 
-| 色  | 色                                                                                          | 適用箇所   |
-| --- | ------------------------------------------------------------------------------------------- | ---------- |
-| 黒  | <img alt="#1e1e1e" src="https://placehold.jp/1e1e1e/1e1e1e/1x1.png" width="16" height="16"> | エディター |
+| 色名 | 色                                                                                          | 適用箇所   |
+| ---- | ------------------------------------------------------------------------------------------- | ---------- |
+| 黒   | <img alt="#1e1e1e" src="https://placehold.jp/1e1e1e/1e1e1e/1x1.png" width="16" height="16"> | エディター |
 
 #### 文字色
-| 色     | 色                                                                                          | 書体                  | 主な適用箇所                                 | コントラスト比 |
+| 色名   | 色                                                                                          | 書体                  | 主な適用箇所                                 | コントラスト比 |
 | ------ | ------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------- | -------------: |
 | 白     | <img alt="#dfdfdf" src="https://placehold.jp/dfdfdf/dfdfdf/1x1.png" width="16" height="16"> |                       | デフォルト、ローカル変数名                   |          12.51 |
 | 白     | <img alt="#cfcfcf" src="https://placehold.jp/cfcfcf/cfcfcf/1x1.png" width="16" height="16"> | bold                  | 特殊な変数名                                 |          10.70 |
-| 白     | <img alt="#afafaf" src="https://placehold.jp/cfcfcf/cfcfcf/1x1.png" width="16" height="16"> |                       | タグの山括弧 <>                                |           7.60 |
+| 白     | <img alt="#afafaf" src="https://placehold.jp/cfcfcf/cfcfcf/1x1.png" width="16" height="16"> |                       | タグの山括弧 <>                              |           7.60 |
 | 赤     | <img alt="#ff6188" src="https://placehold.jp/ff6188/ff6188/1x1.png" width="16" height="16"> |                       | キーワード、プリミティブ型                   |           5.81 |
 | 橙     | <img alt="#fc9867" src="https://placehold.jp/fc9867/fc9867/1x1.png" width="16" height="16"> |                       | パラメーター名                               |           7.80 |
 | 金     | <img alt="#e6b422" src="https://placehold.jp/e6b422/e6b422/1x1.png" width="16" height="16"> |                       | アノテーション                               |           8.66 |
