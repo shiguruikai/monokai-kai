@@ -176,7 +176,6 @@
       "name": "コメント",
       "scope": [
         "comment.line",
-        "comment.block",
         "punctuation.definition.comment"
       ],
       "settings": {
@@ -188,8 +187,8 @@
       "name": "ブロックコメント",
       "scope": [
         "comment.block",
+        "comment.block punctuation.definition",
         "comment.block punctuation.definition.comment",
-        "punctuation.definition.comment comment.block"
       ],
       "settings": {
         "foreground": "#629755",
@@ -202,7 +201,8 @@
         "keyword.other.documentation",
         "keyword.other.phpdoc.php",
         "comment.block storage.type.class.jsdoc",
-        "punctuation.definition.block.tag.jsdoc"
+        "comment.block punctuation.definition.block.tag.jsdoc",
+        "comment.block punctuation.definition.inline.tag.jsdoc"
       ],
       "settings": {
         "foreground": "#629755",
