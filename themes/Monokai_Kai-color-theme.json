@@ -174,10 +174,7 @@
     },
     {
       "name": "コメント",
-      "scope": [
-        "comment.line",
-        "punctuation.definition.comment"
-      ],
+      "scope": ["comment.line", "punctuation.definition.comment"],
       "settings": {
         "foreground": "#858585",
         "fontStyle": ""
@@ -188,7 +185,7 @@
       "scope": [
         "comment.block",
         "comment.block punctuation.definition",
-        "comment.block punctuation.definition.comment",
+        "comment.block punctuation.definition.comment"
       ],
       "settings": {
         "foreground": "#629755",
@@ -282,18 +279,19 @@
       "scope": [
         "constant.language",
         "keyword",
-        "punctuation.definition.keyword",
-        "punctuation.separator.key-value",
         "punctuation.access.module",
+        "punctuation.definition.keyword",
+        "punctuation.section.embedded.begin",
+        "punctuation.section.embedded.end",
+        "punctuation.separator.key-value",
+        "punctuation.separator.types",
         "storage.type.built-in.primitive",
         "storage.type.local.java",
         "storage.type.primitive",
         "storage",
         "support.type.builtin",
         "support.type.primitive",
-        "variable.language",
-        "punctuation.section.embedded.begin",
-        "punctuation.section.embedded.end"
+        "variable.language"
       ],
       "settings": {
         "foreground": "#ff6188",
