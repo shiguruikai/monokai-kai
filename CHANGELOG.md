@@ -1,7 +1,13 @@
 # Change Log
 
+## [1.1.2] - 2022-03-05
+### 修正
+- punctuation.separator.typesを赤くする。 [#6](https://github.com/shiguruikai/monokai-kai/pull/6)
+- jsdocの書体を修正 [#4](https://github.com/shiguruikai/monokai-kai/pull/4)
+- namespaceの書体を修正 [#2](https://github.com/shiguruikai/monokai-kai/pull/2)
+
 ## [1.1.1] - 2022-02-21
-### 変更
+### 修正
 - `README.md`の内容を更新
 
 ## [1.1.0] - 2022-02-20

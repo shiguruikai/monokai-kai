@@ -2,7 +2,7 @@
   "name": "monokai-kai",
   "displayName": "Monokai Kai",
   "description": "VSCodeのデフォルトダークテーマをベースにしたMonokai風のテーマ。",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "shiguruikai",
   "repository": {
     "url": "https://github.com/shiguruikai/monokai-kai"
