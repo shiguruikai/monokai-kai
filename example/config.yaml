@@ -1,0 +1,10 @@
+# Simple comment
+project:
+  name: "Monokai Kai"
+  version: 1.0.0 # Number
+  tags:
+    - theme
+    - vscode
+  settings:
+    active: true # Boolean
+    priority: 10
