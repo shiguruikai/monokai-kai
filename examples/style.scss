@@ -1,0 +1,38 @@
+/* Simple comment */
+$primary-color: #ff6188; // Variable
+$secondary-color: #fc9867;
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+%shared-style {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.button {
+    @include flex-center;
+    @extend %shared-style;
+    background-color: $primary-color;
+    
+    &:hover {
+        background-color: lighten($primary-color, 10%);
+    }
+    
+    &--large {
+        padding: 20px 40px;
+    }
+    
+    .icon {
+        color: white;
+        margin-right: 10px;
+    }
+}
+
+@if $primary-color == #ff6188 {
+    .debug { color: green; }
+}

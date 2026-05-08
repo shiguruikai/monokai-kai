@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monokai Kai - HTML Example</title>
+    <!-- Simple comment -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .internal { color: #a9dc76; }
+    </style>
+</head>
+<body class="dark-theme">
+    <header class="main-header" id="top">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#samples">Samples</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to <span class="highlight">Monokai Kai</span></h1>
+    </header>
+
+    <main>
+        <section id="features">
+            <h2>Core Features</h2>
+            <article class="feature-card" data-id="101">
+                <h3>Vibrant Colors</h3>
+                <p>Designed for <strong>readability</strong> and <em>style</em>.</p>
+                <img src="assets/preview.png" alt="Theme Preview" width="600" height="400">
+            </article>
+        </section>
+
+        <section id="contact">
+            <form action="/submit" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" required placeholder="Enter your email">
+                <button type="submit" disabled>Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Monokai Kai. All rights reserved.</p>
+    </footer>
+
+    <script src="example.js" async defer></script>
+</body>
+</html>

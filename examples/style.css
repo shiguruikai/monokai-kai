@@ -1,0 +1,41 @@
+/* Simple comment */
+@import url("base.css");
+
+:root {
+    --primary-color: #ff6188; /* Constant-ish */
+    --bg-color: #1e1e1e;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #dfdfdf;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.container:hover {
+    opacity: 0.8;
+}
+
+.container::before {
+    content: "Prefix";
+    color: #ffd866;
+}
+
+#header > h1.title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+a:visited {
+    color: #ab9df2;
+}
+
+input[type="text"] {
+    border: 1px solid #404040;
+}

@@ -1,0 +1,9 @@
+{
+  "project": {
+    "name": "Monokai Kai",
+    "version": "1.0.0",
+    "priority": 100,
+    "active": true,
+    "tags": ["theme", "vscode"]
+  }
+}
