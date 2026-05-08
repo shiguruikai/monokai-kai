@@ -1,10 +1,32 @@
-# Simple comment
+# *Detailed* documentation for the configuration.
+# This sample demonstrates Monokai Kai theme features.
+
 project:
   name: "Monokai Kai"
-  version: 1.0.0 # Number
-  tags:
-    - theme
-    - vscode
-  settings:
-    active: true # Boolean
-    priority: 10
+  version: 1.2.0
+  description: |
+    A vibrant and modern dark theme 
+    for VS Code and other editors.
+  
+  # Feature flags
+  features:
+    semantic_highlighting: true
+    custom_icons: false
+    font_ligatures: !!bool "true"
+  
+  # Environment settings
+  env:
+    - name: DEVELOPMENT
+      id: 101
+      api_key: "sk_test_12345"
+    - name: PRODUCTION
+      id: 202
+      api_key: &prod_key "sk_prod_67890"
+
+  # Reference testing
+  active_key: *prod_key
+  
+  # Complex types
+  timeout: 30s
+  retry_count: 3
+  threshold: 0.85

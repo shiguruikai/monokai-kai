@@ -1,9 +1,37 @@
 {
   "project": {
     "name": "Monokai Kai",
-    "version": "1.0.0",
-    "priority": 100,
-    "active": true,
-    "tags": ["theme", "vscode"]
+    "version": "1.2.0",
+    "metadata": {
+      "author": "monokai-kai",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/monokai-kai/monokai-kai.git"
+      }
+    },
+    "stats": {
+      "downloads": 5000,
+      "rating": 4.95,
+      "verified": true
+    },
+    "tags": [
+      "theme",
+      "monokai",
+      "vibrant",
+      "dark"
+    ],
+    "contributors": [
+      {
+        "id": 1,
+        "name": "User A",
+        "roles": ["developer", "designer"]
+      },
+      {
+        "id": 2,
+        "name": "User B",
+        "roles": ["tester"]
+      }
+    ]
   }
 }

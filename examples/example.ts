@@ -1,53 +1,87 @@
 /**
- * Doc comment: Example TypeScript file.
+ * *Detailed* documentation for the `Example` module.
+ * This sample demonstrates **Monokai Kai** theme features.
+ * 
+ * @module ExampleModule
+ * @author monokai-kai
+ * @see {@link http://github.com/monokai-kai}
  */
-import { Component } from './base';
 
+import { Base, Component } from './base';
+
+/**
+ * Data structure representing a user record.
+ * @since 1.0.0
+ */
+export type UserRecord = {
+    readonly id: number;
+    username: string;
+    /** @deprecated Use `status` instead */
+    active?: boolean;
+};
+
+/**
+ * Interface for objects that can be printed.
+ * @template T The type of the content to print.
+ */
+export interface Printable<T = string> {
+    /**
+     * Prints the content.
+     * @param content The **content** to print.
+     */
+    print(content: T): void;
+}
+
+/**
+ * Main example class demonstrating various TS features.
+ */
 @Component({
     selector: 'app-example'
 })
-export class Example<T> extends Base implements Printable {
-    public static readonly VERSION = "1.0.0";
-    
-    private readonly name: string;
-    public status: Status = Status.Active;
+export class Example<T extends Base> extends Base implements Printable<string> {
+    /** Static version identifier. */
+    public static readonly VERSION: string = "1.2.0";
+
+    private _name: string;
+    public status: AppStatus = AppStatus.Active;
 
     constructor(name: string) {
         super();
-        this.name = name; // Property
+        this._name = name;
     }
 
     /**
-     * Prints a message with optional formatting.
-     * @param message - The content to show
+     * Prints a formatted message.
+     * @param message The message to *display*.
+     * @param count Optional repetition count.
+     * @returns The length of the printed message.
+     * @deprecated Use `logger.info()` instead.
      */
-    public print(message?: string): void {
-        // Simple comment
-        const version: number = 1;
-        const text = message ?? "Default";
+    public print(message: string, count: number = 1): number {
+        // Simple line comment
+        /* Block comment */
+        const version: number = 1.0;
+        const regex: RegExp = /^[a-z0-9_-]+$/i;
+        const template: string = `${this._name}: ${message} (v${version})`;
         
-        console.log(`${this.name}: ${text} (v${version})`);
-        
-        const regex = /[a-z]+/g;
-        regex.test(text);
+        console.log(template);
+        return template.length;
     }
-    
-    /** @deprecated Use print instead */
-    public oldPrint(): void {
-        this.print();
+
+    /**
+     * Static helper method.
+     */
+    public static logStatic(): void {
+        console.info("Static call from " + Example.VERSION);
     }
 }
 
-export enum Status {
-    Active,
-    Inactive
-}
-
-export type Point = {
-    readonly x: number;
-    y?: number;
-};
-
-interface Printable {
-    print(message?: string): void;
+/**
+ * Application status enumeration.
+ */
+export enum AppStatus {
+    Active = 0,
+    Inactive = 1,
+    /** @deprecated */
+    Pending = 2
 }

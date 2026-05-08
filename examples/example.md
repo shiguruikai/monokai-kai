@@ -1,41 +1,71 @@
 # Monokai Kai Theme
 
-This is a **comprehensive** Markdown example.
+This is a **comprehensive** Markdown example designed to test the **Monokai Kai** color theme.
 
 ## Text Formatting
-- **Bold text**
-- *Italic text*
-- ***Bold and Italic***
+- **Bold text** with `inline code`
+- *Italic text* and ***Bold & Italic***
 - ~~Strikethrough text~~
-- `Inline code`
-- [Link to Google](https://www.google.com)
-- ![Placeholder Image](https://via.placeholder.com/150)
+- [Link to GitHub](https://github.com/monokai-kai)
+- ![Placeholder](https://via.placeholder.com/50)
 
 ## Code Blocks
+
+### TypeScript
 ```typescript
 /**
- * Example TS in Markdown
+ * *Detailed* documentation.
+ * @module Example
  */
-const greeting: string = "Hello";
-console.log(`${greeting} Monokai!`);
+export class Example<T> {
+    public static readonly VERSION = "1.2.0";
+    private _name: string;
+
+    constructor(name: string) {
+        this._name = name;
+    }
+
+    /** @deprecated */
+    public oldMethod(): void {
+        console.log("Deprecated");
+    }
+}
 ```
 
-## Lists
-1. First item
-2. Second item
-   - Sub item A
-   - Sub item B
+### Rust
+```rust
+#[derive(Debug)]
+pub enum Status {
+    Active,
+    #[deprecated]
+    Pending,
+}
+```
+
+## Lists & Task Lists
+1. Ordered Item
+2. Ordered Item
+   - Nested Unordered
+   - [x] Task Done
+   - [ ] Task Pending
 
 ## Tables
-| Language | Highlighting | Rating |
+| Feature | Status | Priority |
 | :--- | :---: | ---: |
-| Java | Excellent | 5/5 |
-| Python | Smooth | 5/5 |
-| Rust | Precise | 5/5 |
+| Semantic Highlighting | **Active** | High |
+| Syntax Coloring | *Complete* | Medium |
+| Readability | Excellent | `Max` |
 
 ## Blockquotes
-> "Code is like humor. When you have to explain it, it’s bad."
-> — *Cory House*
+> "The only way to do great work is to love what you do."
+> — *Steve Jobs*
+>> Nested blockquote for depth testing.
+
+## Extended Syntax
+- Footnote[^1]
+- <span style="color: #ff6188;">HTML Span Tag</span>
+- <kbd>Ctrl</kbd> + <kbd>C</kbd>
 
 ---
+[^1]: This is a footnote for testing.
 *Created for Monokai Kai theme testing.*

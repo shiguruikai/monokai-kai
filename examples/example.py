@@ -1,45 +1,81 @@
 """
-Doc comment: Example Python file.
+*Detailed* documentation for the `example` module.
+This sample demonstrates **Monokai Kai** theme features.
+
+:module: example
+:author: monokai-kai
+:see: http://github.com/monokai-kai
 """
-from typing import List, Optional
+
 from dataclasses import dataclass
+from typing import TypeVar, Generic, Optional, Protocol
+from enum import IntEnum
+import warnings
+
+T = TypeVar("T")
 
 @dataclass(frozen=True)
 class UserRecord:
-    username: str
+    """
+    Data structure representing a user record.
+    :since: 1.0.0
+    """
     id: int
+    username: str
     active: bool = True
 
-MAX_COUNT: int = 100
-
-class Example(Base):
+class Printable(Protocol[T]):
     """
-    Example class with various Python features.
+    Interface for objects that can be printed.
+    :template T: The type of the content to print.
+    """
+    def print_content(self, content: T) -> None:
+        """
+        Prints the content.
+        :param content: The **content** to print.
+        """
+        ...
+
+class Example(Generic[T]):
+    """
+    Main example class demonstrating various Python features.
     """
     
-    _prefix: str = "PY"
-
+    # Static version identifier
+    VERSION: str = "1.2.0"
+    
     def __init__(self, name: str):
-        # Property
-        self.name = name
-        self._items: List[str] = []
+        self._name = name
+        self.status = AppStatus.ACTIVE
 
     @property
-    def full_name(self) -> str:
-        return f"{self._prefix}_{self.name}"
+    def name(self) -> str:
+        """The name property."""
+        return self._name
+
+    def print_message(self, message: str, count: int = 1) -> int:
+        """
+        Prints a formatted message.
+        
+        :param message: The message to *display*.
+        :param count: Optional repetition count.
+        :return: The length of the printed message.
+        :deprecated: Use `logging.info()` instead.
+        """
+        # Simple line comment
+        version: float = 1.0
+        template: str = f"{self._name}: {message} (v{version})"
+        
+        print(template)
+        return len(template)
 
     @staticmethod
-    def get_version() -> int:
-        return 1
+    def log_static() -> None:
+        """Static helper method."""
+        print(f"Static call from {Example.VERSION}")
 
-    def print_message(self, message: Optional[str] = None) -> None:
-        # Simple comment
-        version = self.get_version()
-        text = message or "Default"
-        print(f"{self.full_name}: {text} {version}")
-        
-        if len(self._items) > 0:
-            print(list(map(str.upper, self._items)))
-
-def global_func(param1: int) -> int:
-    return param1 * 2
+class AppStatus(IntEnum):
+    """Application status enumeration."""
+    ACTIVE = 0
+    INACTIVE = 1
+    PENDING = 2 # @deprecated

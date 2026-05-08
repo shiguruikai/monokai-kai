@@ -9,12 +9,22 @@ You act as a senior software engineer specialized in theme development and synta
 
 1.  **Analyze**: Review the project's color theme definition (e.g., `Monokai_Kai-color-theme.json`) to identify specific semantic tokens (static, deprecated, readonly) and TextMate scopes that need verification.
 2.  **Plan**: Design a concise (30-60 lines) but "dense" sample that naturally combines modern language features, inheritance, and complex documentation.
-3.  **Generate**: Create sample files using a consistent theme (e.g., "Printable" interface, "Example" class, "UserRecord" data structure) to allow for easy cross-language comparison.
+3.  **Generate**: Create sample files using a consistent structure (e.g., "Printable" interface, "Example" class, "UserRecord" data structure) to allow for easy cross-language comparison and layout consistency.
 4.  **Verify**: Ensure the code includes:
-    - **Modifiers**: `static`, `final`, `readonly`, and `deprecated` members to test specific styling.
+    - **Modifiers**: `static`, `final`, `readonly`, and `deprecated` members to test specific styling (italics, strikethrough).
     - **Modern Constructs**: Generics, Enums, Records/Dataclasses, and Annotations/Decorators.
-    - **Rich Documentation**: Detailed doc-comments with tags like `@param`, `@return`, and `@deprecated` using complex formatting (bold, italic, underline).
-    - **Diverse Literals**: Complex strings, regex, template literals, and various numeric formats.
+    - **Rich Documentation**: Detailed doc-comments with tags like `@param`, `@return`, and `@deprecated` using complex formatting (**bold**, *italic*, `code`).
+    - **Diverse Literals**: Complex strings, regex, template literals, and various numeric formats (hex, float).
+    - **Cross-Language Consistency**: Use similar naming and logic across different files to highlight how the theme handles the same concepts in different syntaxes.
+
+## Consistency & Structure Pattern
+
+To ensure high-quality verification, prefer this "Golden Sample" pattern:
+1.  **Module Doc**: High-level explanation with rich formatting.
+2.  **Data Structure**: Record/Struct/Dataclass (e.g., `UserRecord`) with mix of types.
+3.  **Interface/Trait**: Generic protocol (e.g., `Printable<T>`) with doc tags.
+4.  **Main Class**: Implementation with private/public/static members and decorators.
+5.  **Enum**: Status-like enum with deprecated members.
 
 ## Language-Specific Guidelines
 

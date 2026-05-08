@@ -1,68 +1,76 @@
 /**
- * Doc comment: Example Java class.
+ * *Detailed* documentation for the `Example` class.
+ * This sample demonstrates **Monokai Kai** theme features.
+ * 
  * @author monokai-kai
- * @version 1.0
+ * @version 1.2.0
  */
 package example;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@SuppressWarnings("unused")
-public class Example<T extends Base> extends Base implements Printable {
-    
+/**
+ * Interface for objects that can be printed.
+ * @param <T> The type of the content to print.
+ */
+interface Printable<T> {
     /**
-     * Data record for holding user information.
+     * Prints the content.
+     * @param content The **content** to print.
      */
-    public record UserRecord(String username, int id, boolean active) {}
+    void print(T content);
+}
 
-    /**
-     * A static constant property.
-     */
-    public static final int MAX_COUNT = 100;
-    
-    private static String prefix = "LOG:";
-    
-    @Deprecated
-    public String oldField;
+/**
+ * Data record representing a user information.
+ * @since 1.0.0
+ */
+record UserRecord(int id, String username, boolean active) {}
+
+/**
+ * Main example class demonstrating various Java features.
+ * @param <T> A generic type parameter.
+ */
+public class Example<T> implements Printable<String> {
+    /** Static version identifier. */
+    public static final String VERSION = "1.2.0";
 
     private String name;
+    public AppStatus status = AppStatus.ACTIVE;
 
     public Example(String name) {
-        this.name = name; // Property
+        this.name = name;
     }
 
     /**
-     * @param message The message to print
-     * @return The length of the message
+     * Prints a formatted message.
+     * @param message The message to *display*.
+     * @deprecated Use standard logging instead.
      */
     @Override
-    public void print(String message) {
-        // Simple comment
-        int version = 1;
-        System.out.println(prefix + " " + message + " " + version);
-        
-        List<String> list = new ArrayList<>();
-        list.add(message);
-    }
-    
-    public static void staticMethod() {
-        System.out.println("Static call");
-    }
-    
     @Deprecated
-    public void deprecatedMethod() {
-        // This should have strikethrough
+    public void print(String message) {
+        // Simple line comment
+        /* Block comment */
+        double version = 1.0;
+        String template = String.format("%s: %s (v%f)", this.name, message, version);
+        
+        System.out.println(template);
+    }
+
+    /**
+     * Static helper method.
+     */
+    public static void logStatic() {
+        System.out.println("Static call from " + VERSION);
     }
 }
 
-enum Status {
+/**
+ * Application status enumeration.
+ */
+enum AppStatus {
     ACTIVE,
     INACTIVE,
+    /** @deprecated */
     @Deprecated
     PENDING
-}
-
-interface Printable {
-    void print(String message);
 }
