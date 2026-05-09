@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.2.1] - 2026-05-09
+
+- 配色を改善
+
 ## [1.2.0] - 2026-05-09
 
 - [#7](https://github.com/shiguruikai/monokai-kai/pull/7)
