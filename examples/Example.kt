@@ -9,6 +9,8 @@ import java.util.ArrayList
 @Target(AnnotationTarget.CLASS)
 annotation class Experimental
 
+open class Base
+
 @Experimental
 class Example<T : Base>(val name: String, val data: T) : Base(), Printable {
     

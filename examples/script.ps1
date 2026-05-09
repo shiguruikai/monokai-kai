@@ -5,7 +5,7 @@
     The message to display.
 #>
 $Global:MaxCount = 100
-$private:prefix = "PS"
+$prefix = "PS"
 
 function Write-ExampleMessage {
     param(

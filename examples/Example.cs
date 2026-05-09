@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 namespace ExampleNamespace
 {
+    public class Base {}
+
     public interface IPrintable
     {
         void Print(string message);

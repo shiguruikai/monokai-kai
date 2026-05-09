@@ -25,12 +25,17 @@
       {
         "id": 1,
         "name": "User A",
-        "roles": ["developer", "designer"]
+        "roles": [
+          "developer",
+          "designer"
+        ]
       },
       {
         "id": 2,
         "name": "User B",
-        "roles": ["tester"]
+        "roles": [
+          "tester"
+        ]
       }
     ]
   }

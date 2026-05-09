@@ -4,7 +4,7 @@ name = "Monokai Kai"
 version = "1.0.0"
 
 [settings]
-priority = 100 # Number
+priority = 100  # Number
 active = true
 
 tags = ["theme", "vscode"]

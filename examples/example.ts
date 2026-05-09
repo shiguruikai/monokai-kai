@@ -1,13 +1,24 @@
 /**
  * *Detailed* documentation for the `Example` module.
  * This sample demonstrates **Monokai Kai** theme features.
- * 
+ *
  * @module ExampleModule
  * @author monokai-kai
  * @see {@link http://github.com/monokai-kai}
  */
 
-import { Base, Component } from './base';
+
+/**
+ * Base class for examples.
+ */
+export class Base {}
+
+/**
+ * Dummy Component decorator.
+ */
+export function Component(config: any) {
+    return (target: any) => {};
+}
 
 /**
  * Data structure representing a user record.
@@ -62,8 +73,8 @@ export class Example<T extends Base> extends Base implements Printable<string> {
         /* Block comment */
         const version: number = 1.0;
         const regex: RegExp = /^[a-z0-9_-]+$/i;
-        const template: string = `${this._name}: ${message} (v${version})`;
-        
+        const template: string = `${this._name}: ${message} (v${version}), ${regex}`;
+
         console.log(template);
         return template.length;
     }

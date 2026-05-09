@@ -5,15 +5,15 @@ project:
   name: "Monokai Kai"
   version: 1.2.0
   description: |
-    A vibrant and modern dark theme 
+    A vibrant and modern dark theme
     for VS Code and other editors.
-  
+
   # Feature flags
   features:
     semantic_highlighting: true
     custom_icons: false
     font_ligatures: !!bool "true"
-  
+
   # Environment settings
   env:
     - name: DEVELOPMENT
@@ -25,7 +25,7 @@ project:
 
   # Reference testing
   active_key: *prod_key
-  
+
   # Complex types
   timeout: 30s
   retry_count: 3

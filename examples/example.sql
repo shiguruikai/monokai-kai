@@ -13,6 +13,15 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- DDL: Create Posts Table
+CREATE TABLE posts (
+    post_id INT PRIMARY KEY AUTO_INCREMENT,
+    author_id INT,
+    title VARCHAR(100),
+    content TEXT,
+    FOREIGN KEY (author_id) REFERENCES users(user_id)
+);
+
 -- Index
 CREATE INDEX idx_status ON users(status);
 

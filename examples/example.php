@@ -4,6 +4,10 @@
  * @author monokai-kai
  */
 
+namespace Base {
+    class BaseClass {}
+}
+
 namespace Example;
 
 use Base\BaseClass;
@@ -42,9 +46,9 @@ class Example extends BaseClass implements Printable {
         // Simple comment
         $version = 1;
         $status = Status::Active;
-        
+
         echo "{$this->name}: {$message} (v{$version}, status: {$status->value})\n";
-        
+
         $list = ['a', 'b', 'c'];
         array_map(fn($item) => strtoupper($item), $list);
     }

@@ -14,21 +14,25 @@ import warnings
 
 T = TypeVar("T")
 
+
 @dataclass(frozen=True)
 class UserRecord:
     """
     Data structure representing a user record.
     :since: 1.0.0
     """
+
     id: int
     username: str
     active: bool = True
+
 
 class Printable(Protocol[T]):
     """
     Interface for objects that can be printed.
     :template T: The type of the content to print.
     """
+
     def print_content(self, content: T) -> None:
         """
         Prints the content.
@@ -36,14 +40,15 @@ class Printable(Protocol[T]):
         """
         ...
 
+
 class Example(Generic[T]):
     """
     Main example class demonstrating various Python features.
     """
-    
+
     # Static version identifier
     VERSION: str = "1.2.0"
-    
+
     def __init__(self, name: str):
         self._name = name
         self.status = AppStatus.ACTIVE
@@ -56,7 +61,7 @@ class Example(Generic[T]):
     def print_message(self, message: str, count: int = 1) -> int:
         """
         Prints a formatted message.
-        
+
         :param message: The message to *display*.
         :param count: Optional repetition count.
         :return: The length of the printed message.
@@ -65,7 +70,7 @@ class Example(Generic[T]):
         # Simple line comment
         version: float = 1.0
         template: str = f"{self._name}: {message} (v{version})"
-        
+
         print(template)
         return len(template)
 
@@ -74,8 +79,10 @@ class Example(Generic[T]):
         """Static helper method."""
         print(f"Static call from {Example.VERSION}")
 
+
 class AppStatus(IntEnum):
     """Application status enumeration."""
+
     ACTIVE = 0
     INACTIVE = 1
-    PENDING = 2 # @deprecated
+    PENDING = 2  # @deprecated

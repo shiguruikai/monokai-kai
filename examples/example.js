@@ -9,6 +9,11 @@
 const MAX_COUNT = 100;
 
 /**
+ * Base class for example.
+ */
+class Base {}
+
+/**
  * Main example class.
  */
 class Example extends Base {
