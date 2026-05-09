@@ -38,7 +38,7 @@
     "namespace": {
       "foreground": "#dfdfdf",
       "italic": false,
-      "bold": false
+      "bold": true
     },
     "module": {
       "foreground": "#dfdfdf",
@@ -62,6 +62,11 @@
       "foreground": "#fc9867"
     },
     "annotation": {
+      "foreground": "#e6b422",
+      "italic": false,
+      "bold": false
+    },
+    "namespace.attribute": {
       "foreground": "#e6b422",
       "italic": false,
       "bold": false
@@ -117,6 +122,9 @@
       "foreground": "#30c0ff",
       "bold": true
     },
+    "const": {
+      "foreground": "#ab9df2"
+    },
     "variable.readonly": {
       "foreground": "#ab9df2"
     },
@@ -147,6 +155,11 @@
       "bold": true,
       "underline": true
     },
+    "*.decorator": {
+      "foreground": "#e6b422",
+      "italic": false,
+      "bold": false
+    },
     "*.deprecated": {
       "strikethrough": true
     },
@@ -158,11 +171,6 @@
     },
     "interface.static": {
       "italic": false
-    },
-    "*.decorator": {
-      "foreground": "#e6b422",
-      "italic": false,
-      "bold": false
     }
   },
   "tokenColors": [
@@ -230,7 +238,11 @@
       "scope": [
         "comment.block",
         "comment.block punctuation.definition",
-        "comment.block punctuation.definition.comment"
+        "comment.block punctuation.definition.comment",
+        "comment.line.documentation",
+        "comment.line.documentation punctuation.definition.comment",
+        "string.quoted.docstring",
+        "string.quoted.docstring punctuation.definition.string"
       ],
       "settings": {
         "foreground": "#629755",
@@ -269,12 +281,16 @@
         "entity.name.function.decorator",
         "entity.name.type.annotation",
         "meta.declaration.annotation",
+        "meta.attribute.php",
         "meta.decorator",
         "meta.function.decorator",
+        "punctuation.brackets.attribute.rust",
         "punctuation.decorator",
         "punctuation.definition.annotation",
+        "punctuation.definition.attribute.rust",
         "punctuation.definition.decorator",
-        "storage.type.annotation"
+        "storage.type.annotation",
+        "support.other.attribute entity.other.attribute"
       ],
       "settings": {
         "foreground": "#e6b422",
@@ -321,10 +337,11 @@
       }
     },
     {
-      "name": "インターフェース名",
+      "name": "インターフェース名, 型エイリアス",
       "scope": [
         "entity.name.interface",
-        "entity.name.type.interface"
+        "entity.name.type.interface",
+        "entity.name.type.alias"
       ],
       "settings": {
         "foreground": "#30C0FF",
@@ -423,7 +440,9 @@
     {
       "name": "定数",
       "scope": [
-        "variable.other.constant"
+        "variable.other.constant",
+        "constant.other.caps.rust",
+        "constant.other.class.php"
       ],
       "settings": {
         "foreground": "#ab9df2",
@@ -443,7 +462,8 @@
     {
       "name": "数値リテラル",
       "scope": [
-        "constant.numeric"
+        "constant.numeric",
+        "constant.other.color"
       ],
       "settings": {
         "foreground": "#ab9df2",
@@ -453,6 +473,8 @@
     {
       "name": "文字列内の文字エスケープ, プレースホルダ",
       "scope": [
+        "constant.character.entity",
+        "constant.character.entity punctuation.definition",
         "constant.character.escape",
         "constant.other.placeholder"
       ],
@@ -841,14 +863,6 @@
       }
     },
     {
-      "name": "[php] 定数",
-      "scope": "constant.other.class.php",
-      "settings": {
-        "foreground": "#ab9df2",
-        "fontStyle": ""
-      }
-    },
-    {
       "name": "[php] ヒアドキュメント記号",
       "scope": [
         "string.unquoted.nowdoc.php punctuation.definition.string.php",
@@ -876,16 +890,6 @@
       ],
       "settings": {
         "foreground": "#afafaf",
-        "fontStyle": ""
-      }
-    },
-    {
-      "name": "[ts] タイプエイリアス",
-      "scope": [
-        "entity.name.type.alias.ts"
-      ],
-      "settings": {
-        "foreground": "#30c0ff",
         "fontStyle": ""
       }
     },
