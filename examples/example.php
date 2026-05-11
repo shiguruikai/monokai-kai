@@ -1,4 +1,8 @@
 <?php
+/*
+ * http://example.com
+ */
+
 /**
  * Doc comment: Example PHP file.
  * @author monokai-kai

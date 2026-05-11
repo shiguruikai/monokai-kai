@@ -1,6 +1,11 @@
+/*
+ * http://example.com
+ */
+
 /**
  * Doc comment: Example Kotlin file.
  * @property name The name of the example
+ * @see http://example.com
  */
 package example
 
@@ -13,7 +18,7 @@ open class Base
 
 @Experimental
 class Example<T : Base>(val name: String, val data: T) : Base(), Printable {
-    
+
     /**
      * Data class for immutable storage.
      */
@@ -21,7 +26,7 @@ class Example<T : Base>(val name: String, val data: T) : Base(), Printable {
 
     companion object {
         const val MAX_COUNT = 100
-        
+
         @JvmStatic
         fun createDefault(): Example<Base> {
             return Example("Default", Base())
@@ -40,7 +45,7 @@ class Example<T : Base>(val name: String, val data: T) : Base(), Printable {
         val version = 1
         val text = message ?: "Empty"
         println("$name: $text $version")
-        
+
         val list = ArrayList<String>()
         list.add(text)
     }

@@ -1,5 +1,9 @@
+/*
+ * http://example.com
+ */
 /**
  * Doc comment: Example C++ file.
+ * See: http://example.com
  */
 #include <iostream>
 #include <string>
@@ -29,7 +33,7 @@ public:
         // Simple comment
         int version = 1;
         std::cout << name_ << ": " << message << " " << version << std::endl;
-        
+
         auto ptr = std::make_unique<int>(42);
         std::vector<int> v = {1, 2, 3};
     }

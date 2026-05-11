@@ -1,3 +1,6 @@
+/*
+ * http://example.com
+ */
 /**
  * Doc comment: Example C# file.
  */
@@ -44,7 +47,7 @@ namespace ExampleNamespace
             // Simple comment
             var version = 1;
             Console.WriteLine($"{_prefix}_{Name}: {message} {version}");
-            
+
             var list = new List<string> { message };
         }
 

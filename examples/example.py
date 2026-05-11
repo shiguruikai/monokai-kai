@@ -2,9 +2,7 @@
 *Detailed* documentation for the `example` module.
 This sample demonstrates **Monokai Kai** theme features.
 
-:module: example
-:author: monokai-kai
-:see: http://github.com/monokai-kai
+:see: http://example.com
 """
 
 from dataclasses import dataclass

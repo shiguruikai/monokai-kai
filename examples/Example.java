@@ -1,9 +1,14 @@
+/*
+ * http://example.com
+ */
+
 /**
  * *Detailed* documentation for the `Example` class.
  * This sample demonstrates **Monokai Kai** theme features.
- * 
+ *
  * @author monokai-kai
  * @version 1.2.0
+ * @see http://example.com
  */
 package example;
 
@@ -52,7 +57,7 @@ public class Example<T> implements Printable<String> {
         /* Block comment */
         double version = 1.0;
         String template = String.format("%s: %s (v%f)", this.name, message, version);
-        
+
         System.out.println(template);
     }
 

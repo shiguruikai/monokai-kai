@@ -1,9 +1,14 @@
+/*
+ * http://example.com
+ */
+
 /**
  * *Detailed* documentation for the `Example` module.
  * This sample demonstrates **Monokai Kai** theme features.
- * 
+ *
  * @module ExampleJS
  * @author monokai-kai
+ * @see http://example.com
  */
 
 const MAX_COUNT = 100;
@@ -18,7 +23,7 @@ class Base {}
  */
 class Example extends Base {
     /**
-     * @param {string} name 
+     * @param {string} name
      */
     constructor(name) {
         super();
@@ -27,7 +32,7 @@ class Example extends Base {
 
     /**
      * Prints a message asynchronously.
-     * @param {string} message 
+     * @param {string} message
      * @returns {Promise<number>}
      * @deprecated Use standard logger
      */
@@ -35,7 +40,7 @@ class Example extends Base {
         // Simple line comment
         const version = 1.0;
         const text = message || "Default";
-        
+
         return new Promise((resolve) => {
             setTimeout(() => {
                 console.log(`${this.name}: ${text} (v${version})`);
@@ -54,12 +59,12 @@ class Example extends Base {
 
 /**
  * Global function with destructuring.
- * @param {Object} user 
+ * @param {Object} user
  */
 function processUser({ id, username, active = true }) {
     const status = active ? "Active" : "Inactive";
     const regex = /[A-Z]/g;
-    
+
     console.log(`User ${id}: ${username} is ${status}`);
     return regex.test(username);
 }

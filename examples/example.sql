@@ -1,7 +1,9 @@
 -- Simple comment
-/* 
-   Block comment: 
+/*
+   Block comment:
    Example SQL script for Monokai Kai.
+
+   -- http://example.com
 */
 
 -- DDL: Create Table
@@ -26,12 +28,12 @@ CREATE TABLE posts (
 CREATE INDEX idx_status ON users(status);
 
 -- DML: Insert
-INSERT INTO users (username, email) 
+INSERT INTO users (username, email)
 VALUES ('monokai_user', 'monokai@example.com'),
        ('kai_tester', 'kai@example.com');
 
 -- DML: Select with Joins and Functions
-SELECT 
+SELECT
     u.user_id,
     UPPER(u.username) AS display_name,
     COUNT(p.post_id) AS total_posts

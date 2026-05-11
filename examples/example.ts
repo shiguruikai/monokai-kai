@@ -5,6 +5,7 @@
  * @module ExampleModule
  * @author monokai-kai
  * @see {@link http://github.com/monokai-kai}
+ * @see http://example.com
  */
 
 
