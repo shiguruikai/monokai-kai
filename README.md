@@ -16,7 +16,7 @@ VSCodeのデフォルトダークテーマをベースにしたMonokai風のテ�
 | ------ | ---------------------------------- | -------------- | -------------------------------------------- | -------------: |
 | 白     | $\large\color{#dfdfdf}\blacksquare$ |                | デフォルト、ローカル変数名                   |          12.51 |
 | 白     | $\large\color{#cfcfcf}\blacksquare$ | 太字           | 特殊な変数名                                 |          10.70 |
-| 白     | $\large\color{#cfcfcf}\blacksquare$ |                | タグの山括弧 <>                              |           7.60 |
+| 白     | $\large\color{#afafaf}\blacksquare$ |                | タグの山括弧 <>                              |           7.60 |
 | 赤     | $\large\color{#ff6188}\blacksquare$ |                | キーワード、プリミティブ型                   |           5.81 |
 | 橙     | $\large\color{#fc9867}\blacksquare$ |                | パラメーター名                               |           7.80 |
 | 金     | $\large\color{#e6b422}\blacksquare$ |                | アノテーション、デコレータ                   |           8.66 |
