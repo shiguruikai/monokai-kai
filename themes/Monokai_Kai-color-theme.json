@@ -769,7 +769,7 @@
       "name": "[markdown] 斜体 + 太字",
       "scope": [
         "markup.bold markup.italic",
-        "markup.italic markup.bold "
+        "markup.italic markup.bold"
       ],
       "settings": {
         "fontStyle": "italic bold"
