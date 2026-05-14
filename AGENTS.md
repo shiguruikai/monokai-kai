@@ -34,6 +34,19 @@ VSCodeのデフォルトダークテーマをベースにしつつ、Monokai風�
 2. VSCodeの「デバッグ開始」（F5）を実行して、拡張機能開発ホストを立ち上げる。
 3. 開発ホスト内で `examples/` フォルダ内のファイルを開き、シンタックスハイライトを確認する。
 
+## リリース手順
+
+1. **バージョンの更新**: `package.json` の `version` フィールドを更新する。
+2. **変更履歴の更新**: `CHANGELOG.md` に新バージョンの変更内容を追記する。
+3. **タグ付けとコミット**:
+   - `release: vX.X.X` というメッセージでコミットを作成する。
+   - `git tag vX.X.X` でタグを付与する。
+   - `git push origin master --follow-tags` でリモートに反映する。
+4. **パッケージの作成**: `vsce package` コマンドを使用して `.vsix` パッケージを作成する。
+5. **動作確認**: 作成された `.vsix` をインストールし、配色の意図通りであるか最終確認を行う。
+6. **マーケットプレイスへの公開**: `vsce publish` コマンドを使用して VS Code Marketplace に公開する。
+   - パーソナルアクセストークンの作成方法は[公式ドキュメント](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token)に従う。
+
 ## 注意事項
 
 - このテーマは `semanticHighlighting: true` を有効にしています。
