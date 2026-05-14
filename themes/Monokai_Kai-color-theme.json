@@ -84,6 +84,9 @@
     "property": {
       "foreground": "#ace8ff"
     },
+    "variable.classMember": {
+      "foreground": "#ace8ff"
+    },
     "annotationMember": {
       "foreground": "#ace8ff"
     },
@@ -485,7 +488,7 @@
       }
     },
     {
-      "name": "プロパティ名",
+      "name": "プロパティ",
       "scope": [
         "support.type.property-name",
         "support.variable.property",
